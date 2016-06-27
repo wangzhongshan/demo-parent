@@ -6,6 +6,8 @@
 	<artifactId>demo-parent</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
+	<!--测试-->
+
 	<modules>
 		<module>demo-javase</module>
 		<module>demo-java-validate</module>
