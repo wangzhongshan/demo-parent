@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<encoding>UTF-8</encoding>
+		<layout class="ch.qos.logback.classic.PatternLayout">
+			<pattern>[%-5level] %d{HH:mm:ss sss} %C-%L [%thread] - %msg%n
+			</pattern>
+		</layout>
+	</appender>
+
+	<appender name="ALL-FILE"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<encoding>UTF-8</encoding>
+		<file>/opt/logs/wzs/logback.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>/opt/logs/wzs/logback.log.%d{yyyy-MM-dd}
+			</fileNamePattern>
+		</rollingPolicy>
+		<layout class="ch.qos.logback.classic.PatternLayout">
+			<pattern>[%-5level] %d{HH:mm:ss sss} %C-%L [%thread] - %msg%n
+			</pattern>
+		</layout>
+	</appender>
+
+	<!-- error log -->
+
+	<appender name="ERROR-APPENDER"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<encoding>UTF-8</encoding>
+		<file>/opt/logs/wzs/wzs-error.log</file>
+		<filter class="ch.qos.logback.classic.filter.LevelFilter">
+			<level>ERROR</level>
+			<onMatch>ACCEPT</onMatch>
+			<onMismatch>DENY</onMismatch>
+		</filter>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>/opt/logs/ws/wzs-error.log.%d{yyyy-MM-dd}
+			</fileNamePattern>
+		</rollingPolicy>
+		<layout class="ch.qos.logback.classic.PatternLayout">
+			<Pattern>[%-5level] %d{HH:mm:ss sss} %C-%L [%thread] - %msg%n
+			</Pattern>
+		</layout>
+	</appender>
+
+	<appender name="Mag-Ext"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<Encoding>UTF-8</Encoding>
+		<File>/opt/logs/wzs/Mag-Ext.log</File>
+		<Prudent>true</Prudent>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<FileNamePattern>/opt/logs/wzs/Mag-Ext.log.%d{yyyy-MM-dd}
+			</FileNamePattern>
+		</rollingPolicy>
+		<layout class="ch.qos.logback.classic.PatternLayout">
+			<Pattern>[%-5level] %d{HH:mm:ss sss} %C-%L [%thread] - %msg%n
+			</Pattern>
+		</layout>
+	</appender>
+
+	<logger name="Mag-Ext-LOGGER" additivity="true">
+		<level value="DEBUG" />
+		<appender-ref ref="Mag-Ext" />
+	</logger>
+
+	<logger name="org.springframework">
+		<level value="debug" />
+	</logger>
+
+	<root level="debug">
+		<appender-ref ref="STDOUT" />
+		<appender-ref ref="ALL-FILE" />
+		<appender-ref ref="ERROR-APPENDER" />
+	</root>
+
+</configuration>
