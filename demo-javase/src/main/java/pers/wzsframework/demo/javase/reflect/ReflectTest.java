@@ -11,6 +11,7 @@ public class ReflectTest extends BaseReflect<User>{
 	
 	public void test(){
 		System.out.println("fafafe");
+		System.out.println("fafafe");
 		System.out.println(((ParameterizedType)getClass().getGenericSuperclass()).getActualTypeArguments()[0]);
 	}
 
