@@ -1,5 +1,7 @@
 package pers.wzsframework.demo.javase.security;
 
+import org.apache.commons.codec.digest.DigestUtils;
+
 import java.io.UnsupportedEncodingException;
 import java.security.SignatureException;
 
