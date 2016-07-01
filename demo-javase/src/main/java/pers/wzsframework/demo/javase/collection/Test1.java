@@ -10,7 +10,7 @@ public class Test1 {
 	public static void main(String[] args) {
 		List list = new ArrayList();
 		boolean ss = true;
-
+		System.out.println("aaf");
 		list.add(1);
 		list.add(2);
 		list.add(ss);
