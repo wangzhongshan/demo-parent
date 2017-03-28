@@ -9,6 +9,16 @@ import java.util.Map;
 public class MapDemo {
     public static void main(String[] args) {
         merge();
+        getOrDefault();
+    }
+
+    private static void getOrDefault() {
+        Map<String, Integer> map = new HashMap<>();
+        Integer value = 3;
+        String key = "aaa";
+//        System.out.println(map.containsKey(key) ? map.get(key) : value);
+        System.out.println(map.getOrDefault(key, value));
+
     }
 
     public static void merge() {
