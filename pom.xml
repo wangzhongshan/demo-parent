@@ -12,10 +12,13 @@
 		<module>demo-java-validate</module>
 		<module>demo-logback</module>
         <module>demo-okhttp</module>
+        <module>demo-retrofit</module>
     </modules>
 
     <properties>
         <version.okhttp>3.6.0</version.okhttp>
+        <version.retrofit>2.2.0</version.retrofit>
+        <version.lombok>1.16.14</version.lombok>
     </properties>
 
     <dependencyManagement>
@@ -25,8 +28,22 @@
                 <artifactId>okhttp</artifactId>
                 <version>${version.okhttp}</version>
             </dependency>
+            <dependency>
+                <groupId>com.squareup.retrofit2</groupId>
+                <artifactId>retrofit</artifactId>
+                <version>${version.retrofit}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${version.lombok}</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
 
 	<build>
 		<plugins>

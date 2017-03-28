@@ -35,8 +35,8 @@ public class OkhttpDemo {
     }
 
     public static void main(String[] args) throws IOException {
-//        String response = run("https://www.baidu.com");
-        String response = post("https://www.baidu.com","{name:wzs}");
+        String response = run("https://api.github.com/user");
+//        String response = post("https://www.baidu.com","{name:wzs}");
         System.out.println(response);
     }
 }
