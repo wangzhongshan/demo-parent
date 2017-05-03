@@ -1,7 +1,6 @@
 package pers.wzs.demo.lombok;
 
-import lombok.Builder;
-import lombok.Data;
+import lombok.*;
 
 import java.time.LocalDateTime;
 
@@ -10,6 +9,7 @@ import java.time.LocalDateTime;
  */
 @Data
 @Builder
+@NoArgsConstructor
 public class User {
     private Long userId;
     private String userName;

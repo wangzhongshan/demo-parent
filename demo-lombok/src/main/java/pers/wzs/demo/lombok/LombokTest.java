@@ -5,6 +5,6 @@ package pers.wzs.demo.lombok;
  */
 public class LombokTest {
     public static void main(String[] args) {
-        User wzs = User.builder().age(4).userId(1L).userName("wzs").sex(true).build();
+        User wzs = User.builder().userId(1L).userName("wzs").sex(true).age(30).build();
     }
 }
