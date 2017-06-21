@@ -7,8 +7,14 @@ import java.text.DecimalFormat;
  */
 public class NumberTest {
     public static void main(String[] args) {
-        DecimalFormat decimalFormat = new DecimalFormat("￥#,##0.00");
-        System.out.println(decimalFormat.format(011100.1));
+//        DecimalFormat decimalFormat = new DecimalFormat("￥#,##0.00");
+//        System.out.println(decimalFormat.format(011100.1));
 
+        float a = getFloat();
+        System.out.println(a < 6.5);
+    }
+
+    private static float getFloat() {
+        return 1f + 4.5f;
     }
 }

@@ -16,6 +16,7 @@
         <module>demo-jdk8</module>
         <module>demo-mongodb</module>
         <module>demo-lombok</module>
+        <module>demo-netty</module>
     </modules>
 
     <properties>
@@ -50,6 +51,12 @@
                 <groupId>org.mongodb.morphia</groupId>
                 <artifactId>morphia</artifactId>
                 <version>${version.morphia}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.netty</groupId>
+                <artifactId>netty-all</artifactId> <!-- Use 'netty-all' for 4.0 or above -->
+                <version>4.1.11.Final</version>
+                <scope>compile</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>
