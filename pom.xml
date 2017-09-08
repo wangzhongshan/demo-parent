@@ -17,6 +17,7 @@
         <module>demo-mongodb</module>
         <module>demo-lombok</module>
         <module>demo-netty</module>
+        <module>demo-aio</module>
     </modules>
 
     <properties>
