@@ -2,6 +2,7 @@ package pers.wzs.demo.jdk8.collection;
 
 import com.google.common.collect.Maps;
 
+import javax.sound.midi.Soundbank;
 import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -44,8 +45,15 @@ public class StreamDemo {
         // Map.Entry<Integer, Integer> min1 = Collections.min(userCountMap.entrySet(), Comparator.comparing(Map.Entry::getValue));
         // System.out.println(min1);
 
-        List<Integer> collect = Stream.of(11, 22, 33, 4444).limit(3).collect(Collectors.toList());
-        System.out.println(collect);
+        // List<Integer> collect = Stream.of(11, 22, 33, 4444).limit(3).collect(Collectors.toList());
+        // System.out.println(collect);
 
+        Map<Integer, String> map = new HashMap<>();
+        map.put(4, "bbb");
+        List<String> collect = Stream.of(1, 2, 3)
+                                     .filter(integer -> map.get(integer) != null)
+                                     .map(integer -> integer + "")
+                                     .collect(Collectors.toList());
+        System.out.println(collect);
     }
 }

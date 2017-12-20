@@ -6,6 +6,8 @@ package pers.wzsframework.demo.javase.common;
 public class StringTest {
     public static void main(String[] args) {
         String aaa = "fwesss";
-        System.out.println(aaa.length());
+        System.out.println(aaa.getBytes().length);
+        String bbb = "哈哈哈b";
+        System.out.println(bbb.length());
     }
 }
