@@ -11,8 +11,8 @@ import java.nio.file.Paths;
  */
 public class FilesTest {
     public static void main(String[] args) throws IOException {
-        Path path = Paths.get("/Users/Mtime/Downloads/SenseME.lic");
-        Path pathDir = Paths.get("/Users/Mtime/Downloads/");
+        // Path path = Paths.get("/Users/Mtime/Downloads/SenseME.lic");
+        // Path pathDir = Paths.get("/Users/Mtime/Downloads/");
         // Path path1 = Paths.get("/Users/Mtime/Downloads/SenseME.lic1");
         //复制文件
         // Files.copy(path, Files.newOutputStream(Paths.get("/Users/Mtime/Downloads/SenseME.lic1")));
@@ -24,6 +24,6 @@ public class FilesTest {
         // Files.write(path1, bytes);
         // Files.lines(path).forEach(System.out::println);
         // Files.list(pathDir).forEach(System.out::println);
-        Files.walk(pathDir).forEach(System.out::println);
+        // Files.walk(pathDir).forEach(System.out::println);
     }
 }
